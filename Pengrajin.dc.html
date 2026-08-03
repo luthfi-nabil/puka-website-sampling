@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+html,body{margin:0;padding:0;background:#F5F5F3}
+img{max-width:100%}
+a{color:#2B2B2B;text-decoration:none}
+a:hover{color:#9C2B94}
+</style>
+</helmet>
+<div style="font-family:'Quicksand',sans-serif;background:#F5F5F3;color:#2B2B2B;min-height:100vh;overflow-x:hidden">
+
+  <header style="background:#F7F7F5;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;flex-wrap:wrap">
+    <a href="Beranda.dc.html" style="display:flex;align-items:center"><img src="assets/logo.png" alt="PUKA" style="height:58px;width:auto;display:block" /></a>
+    <nav style="display:flex;align-items:center;gap:clamp(20px,5.5vw,96px);flex-wrap:wrap;font-family:'Fredoka',sans-serif;font-size:19px;font-weight:700">
+      <a href="Beranda.dc.html" style="padding:9px 18px;border-radius:999px">Beranda</a>
+      <a href="Tentang.dc.html" style="padding:9px 18px;border-radius:999px">Tentang Kami</a>
+      <a href="Pengrajin.dc.html" style="background:#2B2B2B;color:#FFFFFF;padding:9px 22px;border-radius:999px">Pengrajin</a>
+      <a href="Kontak.dc.html" style="padding:9px 18px;border-radius:999px">Kontak</a>
+    </nav>
+    <div style="width:58px"></div>
+  </header>
+
+  <section style="background:#B9DFF3">
+    <img src="assets/hero-pengrajin.png" alt="Kenali Para Kreator Istimewa" style="width:100%;display:block" />
+  </section>
+
+  <section style="position:relative;background:#F5F5F3;padding:72px 0 96px;overflow:hidden">
+    <img src="assets/gelombang-18.png" alt="" style="position:absolute;left:-40px;top:340px;width:140px;height:auto;pointer-events:none" />
+
+    <div style="max-width:1360px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:64px;align-items:start">
+      <div>
+        <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 20px;padding-left:28%">Mutiara</h2>
+        <img src="assets/muti.png" alt="Mutiara, pengrajin PUKA" style="width:100%;max-width:430px;display:block" />
+      </div>
+      <div style="padding-top:64px">
+        <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0">Lampu Meriah, salah satu kerajinan yang dibuat Muti. Dia multitalented, bisa bermain drum, bernyanyi dan bermain bola bowling. Apalagi ketika meronce dia sangat telaten dan teliti. Sttt.. dia suka jahil dan jago menggombal crafter lainnya.</p>
+      </div>
+    </div>
+
+    <div style="max-width:1360px;margin:0 auto;padding:24px 48px 0;display:flex;justify-content:flex-end">
+      <img src="assets/bunga-22.png" alt="" style="width:100%;max-width:560px;display:block;pointer-events:none" />
+    </div>
+
+    <div style="max-width:1360px;margin:32px auto 0;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:64px;align-items:start">
+      <div>
+        <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 20px;padding-left:28%">Rafi</h2>
+        <img src="assets/rafi.png" alt="Rafi, pengrajin PUKA" style="width:100%;max-width:430px;display:block" />
+      </div>
+      <div style="padding-top:64px">
+        <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0">Happy Keychain, salah satu kerajinan yang dibuat Rafi. Meski, Rafi mengidap Neurodivergent atau perbedaan cara kerja otak dengan tipikal, dia suka sekali bermimpi, bernyanyi dan bercerita. OH IYA, dia bercerita pernah bermimpi kalau dia sedang meronce juga loh.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#333333;color:#F5F5F3;border-radius:28px 28px 0 0;padding:56px 48px 28px">
+    <div style="max-width:1440px;margin:0 auto">
+      <p style="font-family:'Fredoka',sans-serif;font-size:18px;letter-spacing:.04em;margin:0 0 24px;color:#EDEDEA">KONTAK KAMI</p>
+      <p style="font-size:17px;line-height:1.6;margin:0 0 22px">+62 811-222-88-333<br />Hi.pulaskatumbiri@gmail.com</p>
+      <p style="font-size:17px;line-height:1.6;margin:0 0 32px">Jl. Jati No. 35 Paledang, Lengkong, Bandung</p>
+      <p style="font-size:12px;margin:0;color:#C9C9C4">© 2026 PUKA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+</div>
+</x-dc>
+</body>
+</html>

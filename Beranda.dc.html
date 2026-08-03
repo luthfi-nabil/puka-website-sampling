@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<style>
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Fredoka';src:url('assets/fonts/Fredoka-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-Regular.ttf') format('truetype');font-weight:400;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-Medium.ttf') format('truetype');font-weight:500;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-SemiBold.ttf') format('truetype');font-weight:600;font-display:swap}
+@font-face{font-family:'Quicksand';src:url('assets/fonts/Quicksand-Bold.ttf') format('truetype');font-weight:700;font-display:swap}
+html,body{margin:0;padding:0;background:#F5F5F3}
+img{max-width:100%}
+a{color:#2B2B2B;text-decoration:none}
+a:hover{color:#9C2B94}
+</style>
+</helmet>
+<div style="font-family:'Quicksand',sans-serif;background:#F5F5F3;color:#2B2B2B;min-height:100vh;overflow-x:hidden">
+
+  <header style="background:#F7F7F5;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:14px 40px;flex-wrap:wrap">
+    <a href="Beranda.dc.html" style="display:flex;align-items:center"><img src="assets/logo.png" alt="PUKA" style="height:58px;width:auto;display:block" /></a>
+    <nav style="display:flex;align-items:center;gap:clamp(20px,5.5vw,96px);flex-wrap:wrap;font-family:'Fredoka',sans-serif;font-size:19px;font-weight:700">
+      <a href="Beranda.dc.html" style="background:#2B2B2B;color:#FFFFFF;padding:9px 22px;border-radius:999px">Beranda</a>
+      <a href="Tentang.dc.html" style="padding:9px 18px;border-radius:999px">Tentang Kami</a>
+      <a href="Pengrajin.dc.html" style="padding:9px 18px;border-radius:999px">Pengrajin</a>
+      <a href="Kontak.dc.html" style="padding:9px 18px;border-radius:999px">Kontak</a>
+    </nav>
+    <div style="width:58px"></div>
+  </header>
+
+  <section style="background:#B9DFF3">
+    <img src="assets/hero-beranda.png" alt="Disabilitas, Kreativitas, Tanpa Batas — karya tangan yang dibuat dengan sepenuh hati, buat harimu berwarna bersama PUKA." style="width:100%;display:block" />
+  </section>
+
+  <section style="position:relative;background:#F5F5F3;padding:72px 0 0;overflow:hidden">
+    <img src="assets/gelombang-17.png" alt="" style="position:absolute;left:-30px;top:20px;width:130px;height:auto;pointer-events:none" />
+    <img src="assets/bunga-20.png" alt="" style="position:absolute;right:0;top:180px;width:70px;height:auto;pointer-events:none" />
+    <div style="max-width:1440px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
+
+      <div style="position:relative;min-height:320px;align-self:end;display:flex;align-items:flex-end">
+        <img src="assets/website-19.png" alt="Bunga rajut buatan tangan PUKA" style="width:100%;max-width:520px;display:block;clip-path:inset(0 0 1.5% 0);margin-bottom:0" />
+      </div>
+
+      <div style="padding-bottom:88px">
+        <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0 0 52px;text-wrap:pretty">Setiap simpul benang dan jahitan kain adalah ruang tanpa batas bagi teman-teman disabilitas untuk terus dapat mengekspresikan kreativitas, merajut kemandirian, dan melahirkan karya kerajinan tangan yang memukau.</p>
+
+        <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 22px;padding-top:0">Produk Kami</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px">
+          <div>
+            <div role="button" tabindex="0" onClick="{{ openAnting }}" onKeyDown="{{ keyAnting }}" style="border:1.5px solid #9C2B94;border-radius:16px;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;padding:18px;background:#FFFFFF;cursor:pointer;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 8px 20px rgba(156,43,148,.18);transform:translateY(-3px)">
+              <img src="assets/anting.png" alt="Anting Moana Payet Colorful Ocean Series" style="max-width:78%;max-height:78%;object-fit:contain" />
+            </div>
+            <p style="font-size:16px;line-height:1.45;margin:14px 0 0">Anting Moana Payet Colorful Ocean Series</p>
+          </div>
+          <div>
+            <div role="button" tabindex="0" onClick="{{ openBando }}" onKeyDown="{{ keyBando }}" style="border:1.5px solid #9C2B94;border-radius:16px;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;padding:18px;background:#FFFFFF;cursor:pointer;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 8px 20px rgba(156,43,148,.18);transform:translateY(-3px)">
+              <img src="assets/bando.png" alt="Bando Payet Sequins Gardena" style="max-width:78%;max-height:88%;object-fit:contain" />
+            </div>
+            <p style="font-size:16px;line-height:1.45;margin:14px 0 0">Bando Payet Sequins Gardena</p>
+          </div>
+          <div>
+            <div role="button" tabindex="0" onClick="{{ openWallet }}" onKeyDown="{{ keyWallet }}" style="border:1.5px solid #9C2B94;border-radius:16px;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;padding:18px;background:#FFFFFF;cursor:pointer;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 8px 20px rgba(156,43,148,.18);transform:translateY(-3px)">
+              <img src="assets/wallet.png" alt="Pixy Mini Wallet Sulam Goni" style="max-width:78%;max-height:78%;object-fit:contain" />
+            </div>
+            <p style="font-size:16px;line-height:1.45;margin:14px 0 0">Pixy Mini Wallet Sulam Goni</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer style="background:#333333;color:#F5F5F3;border-radius:28px 28px 0 0;padding:56px 48px 28px">
+    <div style="max-width:1440px;margin:0 auto">
+      <p style="font-family:'Fredoka',sans-serif;font-size:18px;letter-spacing:.04em;margin:0 0 24px;color:#EDEDEA">KONTAK KAMI</p>
+      <p style="font-size:17px;line-height:1.6;margin:0 0 22px">+62 811-222-88-333<br />Hi.pulaskatumbiri@gmail.com</p>
+      <p style="font-size:17px;line-height:1.6;margin:0 0 32px">Jl. Jati No. 35 Paledang, Lengkong, Bandung</p>
+      <p style="font-size:12px;margin:0;color:#C9C9C4">© 2026 PUKA. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+    <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:60;background:rgba(43,43,43,.45);display:flex;align-items:center;justify-content:center;padding:32px">
+      <div onClick="{{ stop }}" style="position:relative;background:#F5F5F3;border-radius:24px;padding:28px;max-width:920px;width:100%;max-height:86vh;overflow:auto;box-shadow:0 24px 60px rgba(0,0,0,.28)">
+        <button type="button" onClick="{{ close }}" aria-label="Tutup" style="position:absolute;top:16px;right:18px;border:none;background:transparent;font-family:'Quicksand',sans-serif;font-size:26px;line-height:1;color:#2B2B2B;cursor:pointer;padding:4px 8px;border-radius:999px" style-hover="background:#E6E6E2">×</button>
+        <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 22px;padding-right:40px">Produk Kami</h2>
+        <div style="display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:28px;align-items:start">
+          <div>
+            <div style="border:1.5px solid #9C2B94;border-radius:16px;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;padding:18px;background:#FFFFFF">
+              {{ activeImgEl }}
+            </div>
+            <p style="font-size:16px;line-height:1.45;margin:14px 0 0">{{ activeTitle }}</p>
+          </div>
+          <div style="background:#CDE8F6;border-radius:18px;padding:24px 26px">
+            <p style="font-size:17px;line-height:1.6;margin:0 0 10px;font-weight:600">{{ activeTitle }}</p>
+            <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0 0 14px;text-wrap:pretty">{{ activeDesc }}</p>
+            <div style="display:grid;grid-template-columns:auto 1fr;column-gap:14px;row-gap:6px;font-size:17px;line-height:1.6">
+              <p style="margin:0">Bahan</p>
+              <p style="margin:0">: {{ activeBahan }}</p>
+              <p style="margin:0">Ukuran</p>
+              <p style="margin:0;white-space:pre-line">: {{ activeUkuran }}</p>
+              <sc-if value="{{ hasMotif }}" hint-placeholder-val="{{ false }}">
+                <p style="margin:0">Motif</p>
+              </sc-if>
+              <sc-if value="{{ hasMotif }}" hint-placeholder-val="{{ false }}">
+                <p style="margin:0">: {{ activeMotif }}</p>
+              </sc-if>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+const PRODUCTS = {
+  anting: {
+    img: 'assets/anting.png',
+    title: 'Anting Moana Payet Colorful Ocean Series',
+    desc: 'Anting tusuk dihias dengan sequins bernuansa terumbu karang di lautan yang indah. Spesial buatan teman-teman inklusif.',
+    bahan: 'Stainless Still Hypoallergenic',
+    ukuran: '8mm'
+  },
+  bando: {
+    img: 'assets/bando.png',
+    title: 'Bando Payet Sequins Gardena',
+    desc: 'Bandoo cantik berpayet bunga warna-warni memberikan kesan yang elegance dan playful, sangat cocok untuk acara casual dan formal.',
+    bahan: 'Manik-manik Premium, Bandoo',
+    ukuran: 'All Size'
+  },
+  wallet: {
+    img: 'assets/wallet.png',
+    title: 'Pixy Mini Wallet',
+    desc: 'Dompet kecil dengan berbagai motif dan warna - warni ceria.',
+    bahan: 'Goni, benang sulam wol',
+    ukuran: '10 x 1 x 10 cm',
+    motif: 'Garden, Shape, Leopard.'
+  },
+  bracelet: {
+    img: 'assets/anting.png',
+    title: 'Fairy Tale Bracelet',
+    desc: 'Siapa bilang dongeng cuma ada di buku? Di PUKA, dongeng bisa kamu pakai di pergelangan tanganmu. Dibuat dari potongan-potongan kecil yang dirangkai dengan penuh imajinasi, setiap Fairy Tale Bracelet punya cerita yang berbeda.',
+    bahan: 'Payet, Pita beludru glitter halus, manik-manik, benang sulam',
+    ukuran: 'panjang pita beludru 12 cm\npanjang rantai 5 cm\nlebar 1,6 cm'
+  }
+};
+
+class Component extends DCLogic {
+  state = { open: null };
+  open(key) { this.setState({ open: key }); }
+  close = () => this.setState({ open: null });
+  componentDidMount() {
+    this._esc = (e) => { if (e.key === 'Escape') this.close(); };
+    document.addEventListener('keydown', this._esc);
+  }
+  componentWillUnmount() { document.removeEventListener('keydown', this._esc); }
+  renderVals() {
+    const p = PRODUCTS[this.state.open] || {};
+    const key = (k) => (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); this.open(k); } };
+    return {
+      isOpen: !!this.state.open,
+      close: this.close,
+      stop: (e) => e.stopPropagation(),
+      openAnting: () => this.open('anting'),
+      openBando: () => this.open('bando'),
+      openWallet: () => this.open('wallet'),
+      keyAnting: key('anting'),
+      keyBando: key('bando'),
+      keyWallet: key('wallet'),
+      hasMotif: !!p.motif,
+      activeMotif: p.motif || '',
+      activeImgEl: p.img ? React.createElement('img', { src: p.img, alt: p.title, style: { maxWidth: '78%', maxHeight: '82%', objectFit: 'contain' } }) : null,
+      activeTitle: p.title || '',
+      activeDesc: p.desc || '',
+      activeBahan: p.bahan || '',
+      activeUkuran: p.ukuran || ''
+    };
+  }
+}
+</script>
+</body>
+</html>
