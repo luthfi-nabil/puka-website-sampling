@@ -21,6 +21,15 @@ html,body{margin:0;padding:0;background:#F5F5F3}
 img{max-width:100%}
 a{color:#2B2B2B;text-decoration:none}
 a:hover{color:#9C2B94}
+@media(max-width:640px){
+  header{padding:12px 20px !important;flex-direction:column !important;align-items:center !important;gap:12px !important}
+  .nav-spacer{display:none !important}
+  header nav{gap:8px !important;font-size:15px !important;justify-content:center !important}
+  header nav a{padding:6px 12px !important;font-size:15px !important}
+  footer{padding:28px 20px !important;border-radius:20px 20px 0 0 !important}
+  .contact-grid{grid-template-columns:1fr !important;padding:0 20px !important;gap:32px !important}
+  .icons-section{padding:40px 20px 64px !important}
+}
 </style>
 </helmet>
 <div style="font-family:'Quicksand',sans-serif;background:#F5F5F3;color:#2B2B2B;min-height:100vh;overflow-x:hidden">
@@ -33,7 +42,7 @@ a:hover{color:#9C2B94}
       <a href="Pengrajin.dc.html" style="padding:9px 18px;border-radius:999px">Pengrajin</a>
       <a href="Kontak.dc.html" style="background:#2B2B2B;color:#FFFFFF;padding:9px 22px;border-radius:999px">Kontak</a>
     </nav>
-    <div style="width:58px"></div>
+    <div class="nav-spacer" style="width:58px"></div>
   </header>
 
   <section style="background:#B9DFF3">
@@ -41,7 +50,7 @@ a:hover{color:#9C2B94}
   </section>
 
   <section style="background:#F5F5F3;padding:80px 0 40px">
-    <div style="max-width:1280px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:72px;align-items:start">
+    <div class="contact-grid" style="max-width:1280px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:72px;align-items:start">
       <div><img src="assets/toko.png" alt="Toko PUKA" style="width:100%;max-width:440px;display:block" /></div>
       <div>
         <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 28px">Toko PUKA</h2>
@@ -67,7 +76,7 @@ a:hover{color:#9C2B94}
     </div>
   </section>
 
-  <section style="background:#F5F5F3;padding:60px 48px 88px">
+  <section class="icons-section" style="background:#F5F5F3;padding:60px 48px 88px">
     <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:48px;text-align:center">
       <div style="display:flex;flex-direction:column;align-items:center;gap:18px">
         <img src="assets/call.png" alt="" style="height:62px;width:auto" />

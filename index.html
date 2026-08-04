@@ -21,6 +21,18 @@ html,body{margin:0;padding:0;background:#F5F5F3}
 img{max-width:100%}
 a{color:#2B2B2B;text-decoration:none}
 a:hover{color:#9C2B94}
+@media(max-width:640px){
+  header{padding:12px 20px !important;flex-direction:column !important;align-items:center !important;gap:12px !important}
+  .nav-spacer{display:none !important}
+  header nav{gap:8px !important;font-size:15px !important;justify-content:center !important}
+  header nav a{padding:6px 12px !important;font-size:15px !important}
+  footer{padding:40px 20px 24px !important;border-radius:20px 20px 0 0 !important}
+  .content-grid{grid-template-columns:1fr !important;padding:0 20px !important;gap:32px !important}
+  .product-grid{grid-template-columns:repeat(2,1fr) !important;gap:16px !important}
+  .modal-grid{grid-template-columns:1fr !important}
+  .modal-overlay{padding:16px !important}
+  .deco-abs{display:none !important}
+}
 </style>
 </helmet>
 <div style="font-family:'Quicksand',sans-serif;background:#F5F5F3;color:#2B2B2B;min-height:100vh;overflow-x:hidden">
@@ -33,7 +45,7 @@ a:hover{color:#9C2B94}
       <a href="Pengrajin.dc.html" style="padding:9px 18px;border-radius:999px">Pengrajin</a>
       <a href="Kontak.dc.html" style="padding:9px 18px;border-radius:999px">Kontak</a>
     </nav>
-    <div style="width:58px"></div>
+    <div class="nav-spacer" style="width:58px"></div>
   </header>
 
   <section style="background:#B9DFF3">
@@ -41,9 +53,9 @@ a:hover{color:#9C2B94}
   </section>
 
   <section style="position:relative;background:#F5F5F3;padding:72px 0 0;overflow:hidden">
-    <img src="assets/gelombang-17.png" alt="" style="position:absolute;left:-30px;top:20px;width:130px;height:auto;pointer-events:none" />
-    <img src="assets/bunga-20.png" alt="" style="position:absolute;right:0;top:180px;width:70px;height:auto;pointer-events:none" />
-    <div style="max-width:1440px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
+    <img src="assets/gelombang-17.png" alt="" class="deco-abs" style="position:absolute;left:-30px;top:20px;width:130px;height:auto;pointer-events:none" />
+    <img src="assets/bunga-20.png" alt="" class="deco-abs" style="position:absolute;right:0;top:180px;width:70px;height:auto;pointer-events:none" />
+    <div class="content-grid" style="max-width:1440px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
 
       <div style="position:relative;min-height:320px;align-self:end;display:flex;align-items:flex-end">
         <img src="assets/website-19.png" alt="Bunga rajut buatan tangan PUKA" style="width:100%;max-width:520px;display:block;clip-path:inset(0 0 1.5% 0);margin-bottom:0" />
@@ -53,7 +65,7 @@ a:hover{color:#9C2B94}
         <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0 0 52px;text-wrap:pretty">Setiap simpul benang dan jahitan kain adalah ruang tanpa batas bagi teman-teman disabilitas untuk terus dapat mengekspresikan kreativitas, merajut kemandirian, dan melahirkan karya kerajinan tangan yang memukau.</p>
 
         <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 22px;padding-top:0">Produk Kami</h2>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px">
+        <div class="product-grid" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:32px">
           <div>
             <div role="button" tabindex="0" onClick="{{ openAnting }}" onKeyDown="{{ keyAnting }}" style="border:1.5px solid #9C2B94;border-radius:16px;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;padding:18px;background:#FFFFFF;cursor:pointer;transition:box-shadow .18s ease,transform .18s ease" style-hover="box-shadow:0 8px 20px rgba(156,43,148,.18);transform:translateY(-3px)">
               <img src="assets/anting.png" alt="Anting Moana Payet Colorful Ocean Series" style="max-width:78%;max-height:78%;object-fit:contain" />
@@ -88,11 +100,11 @@ a:hover{color:#9C2B94}
   </footer>
 
   <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
-    <div onClick="{{ close }}" style="position:fixed;inset:0;z-index:60;background:rgba(43,43,43,.45);display:flex;align-items:center;justify-content:center;padding:32px">
+    <div onClick="{{ close }}" class="modal-overlay" style="position:fixed;inset:0;z-index:60;background:rgba(43,43,43,.45);display:flex;align-items:center;justify-content:center;padding:32px">
       <div onClick="{{ stop }}" style="position:relative;background:#F5F5F3;border-radius:24px;padding:28px;max-width:920px;width:100%;max-height:86vh;overflow:auto;box-shadow:0 24px 60px rgba(0,0,0,.28)">
         <button type="button" onClick="{{ close }}" aria-label="Tutup" style="position:absolute;top:16px;right:18px;border:none;background:transparent;font-family:'Quicksand',sans-serif;font-size:26px;line-height:1;color:#2B2B2B;cursor:pointer;padding:4px 8px;border-radius:999px" style-hover="background:#E6E6E2">×</button>
         <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:23px;margin:0 0 22px;padding-right:40px">Produk Kami</h2>
-        <div style="display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:28px;align-items:start">
+        <div class="modal-grid" style="display:grid;grid-template-columns:minmax(150px,190px) 1fr;gap:28px;align-items:start">
           <div>
             <div style="border:1.5px solid #9C2B94;border-radius:16px;aspect-ratio:1/1.05;display:flex;align-items:center;justify-content:center;padding:18px;background:#FFFFFF">
               {{ activeImgEl }}

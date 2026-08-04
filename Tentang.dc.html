@@ -21,6 +21,16 @@ html,body{margin:0;padding:0;background:#F5F5F3}
 img{max-width:100%}
 a{color:#2B2B2B;text-decoration:none}
 a:hover{color:#9C2B94}
+@media(max-width:640px){
+  header{padding:12px 20px !important;flex-direction:column !important;align-items:center !important;gap:12px !important}
+  .nav-spacer{display:none !important}
+  header nav{gap:8px !important;font-size:15px !important;justify-content:center !important}
+  header nav a{padding:6px 12px !important;font-size:15px !important}
+  footer{padding:40px 20px 24px !important;border-radius:20px 20px 0 0 !important}
+  .content-grid{grid-template-columns:1fr !important;padding:0 20px !important;gap:32px !important}
+  .deco-abs{display:none !important}
+  .org-section{padding:40px 20px 48px !important;border-radius:40px 40px 0 0 !important}
+}
 </style>
 </helmet>
 <div style="font-family:'Quicksand',sans-serif;background:#F5F5F3;color:#2B2B2B;min-height:100vh;overflow-x:hidden">
@@ -33,7 +43,7 @@ a:hover{color:#9C2B94}
       <a href="Pengrajin.dc.html" style="padding:9px 18px;border-radius:999px">Pengrajin</a>
       <a href="Kontak.dc.html" style="padding:9px 18px;border-radius:999px">Kontak</a>
     </nav>
-    <div style="width:58px"></div>
+    <div class="nav-spacer" style="width:58px"></div>
   </header>
 
   <section style="background:#B9DFF3">
@@ -41,13 +51,13 @@ a:hover{color:#9C2B94}
   </section>
 
   <section style="position:relative;background:#F5F5F3;padding:72px 0 48px;overflow:hidden">
-    <img src="assets/bunga-21.png" alt="" style="position:absolute;right:0;top:280px;width:110px;height:auto;pointer-events:none" />
-    <div style="max-width:1240px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
+    <img src="assets/bunga-21.png" alt="" class="deco-abs" style="position:absolute;right:0;top:280px;width:110px;height:auto;pointer-events:none" />
+    <div class="content-grid" style="max-width:1240px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
       <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0">PUKA adalah singkatan dari Pulas Katumbiri, yang berarti goresan pelangi. PUKA merupaan social business yang telah berdiri sejak 2015, memproduksi produk handcraft aksesoris seperti tas, pouch, bando, kaos kaki, dan masih banyak lagi.</p>
       <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0">Dalam produksi PUKA, PUKA bekerja sama dengan berbagai SLB yang berada di Garut dan juga Bandung. PUKA membuktikan bahwa meskipun mereka memiliki kekurangan, mereka bisa membuat berbagai macam produk yang menarik dan memiliki keunikan tersendiri.</p>
     </div>
 
-    <div style="max-width:1240px;margin:64px auto 0;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
+    <div class="content-grid" style="max-width:1240px;margin:64px auto 0;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
       <div><img src="assets/founder.png" alt="Dessy Nur Anisa Rahma, Founder PUKA" style="width:100%;max-width:440px;display:block" /></div>
       <div style="padding-top:24px">
         <h2 style="font-family:'Fredoka',sans-serif;font-weight:600;font-size:22px;line-height:1.35;margin:0 0 22px">Founder PUKA<br />Dessy Nur Anisa Rahma</h2>
@@ -55,7 +65,7 @@ a:hover{color:#9C2B94}
       </div>
     </div>
 
-    <div style="max-width:1240px;margin:72px auto 0;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
+    <div class="content-grid" style="max-width:1240px;margin:72px auto 0;padding:0 48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(440px,1fr));gap:56px;align-items:start">
       <div>
         <p style="font-family:'Fredoka',sans-serif;font-size:17px;letter-spacing:.04em;margin:0 0 6px">VISI</p>
         <p style="font-size:17px;line-height:1.65;text-align:justify;margin:0">Menjadi ruang berkarya yang inklusif, memberdayakan serta menghasilkan produk bernilai seni tinggi yang ramah disabilitas</p>
@@ -68,7 +78,7 @@ a:hover{color:#9C2B94}
   </section>
 
   <section style="padding:0 0 0">
-    <div style="background:#FBE2A4;border-radius:64px 64px 0 0;padding:64px 48px 72px">
+    <div class="org-section" style="background:#FBE2A4;border-radius:64px 64px 0 0;padding:64px 48px 72px">
       <div style="max-width:1240px;margin:0 auto">
         <img src="assets/bagan.png" alt="Bagan struktur organisasi PUKA" style="width:100%;display:block" />
       </div>
